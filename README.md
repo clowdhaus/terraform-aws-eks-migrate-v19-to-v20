@@ -10,7 +10,7 @@ This module will not receive updates in the future, it is only intended to help 
     module "eks" {
     -  source  = "terraform-aws-modules/eks/aws"
     -  version = "~> 19.21"
-    +  source  = "git@github.com:clowdhaus/terraform-aws-eks-v20-migrate.git?ref=3f626cc493606881f38684fc366688c36571c5c5"
+    +  source  = "git@github.com:clowdhaus/terraform-aws-eks-v20-migrate.git?ref=933e800500c7fb6c7420996dd5021f8975d86192"
     }
     ```
 3. Review the upgrade guide for `v20.0.0` and make any necessary changes to your module definition
@@ -18,7 +18,7 @@ This module will not receive updates in the future, it is only intended to help 
 5. Once the changes have been applied and you confirm that necessary access entries are present in the cluster, change the source of your module back to the `terraform-aws-eks` module using the appropriate version
     ```diff
     module "eks" {
-    -  source  = "git@github.com:clowdhaus/terraform-aws-eks-v20-migrate.git?ref=3f626cc493606881f38684fc366688c36571c5c5"
+    -  source  = "git@github.com:clowdhaus/terraform-aws-eks-v20-migrate.git?ref=933e800500c7fb6c7420996dd5021f8975d86192"
     +  source  = "terraform-aws-modules/eks/aws"
     +  version = "~> 20.0"
     }
